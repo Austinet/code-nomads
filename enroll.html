@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll</title>
+    <link rel="stylesheet" href="css/enroll.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="images/logo.png" alt="CodeNomads logo">
+            </div>
+            <div class="nav-links close">
+                <ul class="links">
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="">COURSES</a>
+                    </li>
+                    <li>
+                        <a href="">HOW IT WORKS</a>
+                    </li>
+                </ul>
+
+                <ul class="login-signup">
+                    <li>
+                        <a href="">Log In</a>
+                    </li>
+                    <li>
+                        <a href="/enroll.html">Sign up</a>
+                    </li>
+                    <li>
+                        <img src="images/Flame.svg" alt="flame" class="flame">
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <button id="menu-btn">
+            <img src="images/menu-02.svg" alt="menu">
+        </button>
+    </header>
+    <main id="enroll">
+        <section class="enroll-form-container">
+            <div class="enroll-form-header">
+                <h2><span>Enroll for </span><img src="images/logo-green.svg" alt="CodeNomads logo"><span>6 Weeks Course</span></h2>
+            </div>
+            <form>
+                <div class="email-container">
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" id="email" placeholder="enter address here" required>
+                    <img src="images/mail-at-sign-01.svg" alt="mail">
+                </div>
+                <div>
+                    <label for="message">Message <span>optional</span></label>
+                    <textarea name="message" id="message"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <script src="js/menu.js"></script>
+</body>
+</html>

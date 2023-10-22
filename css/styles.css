@@ -1,16 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
-
-:root {
-    --black: #121212;
-    --ash-color: rgba(243, 243, 243, 0.95);
-    --code-nomads-green: #0FFF50;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+@import url("variables-reset.css");
 
 /* General Style */
 
@@ -34,6 +22,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
 }
 
 nav {
@@ -84,7 +76,9 @@ nav .login-signup li:first-child::after {
 /* Hero section */
 #hero-section {
     background-color: var(--black);
-    padding: 2.31rem 1.56rem 5.62rem;
+    padding: 6.31rem 1.56rem 5.62rem;
+    /* padding: 2.31rem 1.56rem 5.62rem; */
+
 }
 
 .hero-image {
@@ -197,6 +191,7 @@ nav .login-signup li:first-child::after {
 /* Large Screen */
 @media screen and (min-width: 1024px) {
     header {
+        position: static;
         padding: 1.5rem 6.25rem;
     }
 
@@ -236,7 +231,6 @@ nav .login-signup li:first-child::after {
     nav .nav-links a {
         font-size: 1rem;
     }
-
 
     #hero-section {
         display: flex;

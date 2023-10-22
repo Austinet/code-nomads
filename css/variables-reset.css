@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+:root {
+    --black: #121212;
+    --shade-black:#080D1F;
+    --white: #fff;
+    --ash-color: rgba(243, 243, 243, 0.95);
+    --code-nomads-green: #0FFF50;
+    --gray-text: #848484;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
