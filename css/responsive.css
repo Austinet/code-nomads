@@ -1,0 +1,87 @@
+@media screen and (min-width: 680px) {}
+
+
+
+@media screen and (min-width: 1024px) {
+
+    /* Header/Navigation section with links */
+    header {
+        position: static;
+        padding: 1.5rem 6.25rem;
+    }
+
+    #menu-btn {
+        display: none;
+    }
+
+    .close {
+        display: block;
+    }
+
+    nav {
+        flex-direction: row;
+        align-items: center;
+        gap: 1.88rem;
+        width: 100%;
+    }
+
+    .logo-container {
+        width: 20%;
+    }
+
+    nav .nav-links,
+    nav .links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav .nav-links {
+        width: 80%;
+    }
+
+    nav .links {
+        gap: 2.5rem;
+    }
+
+    nav .links a {
+        text-transform: uppercase;
+    }
+
+    nav .nav-links a {
+        font-size: 1rem;
+    }
+
+    /* Hero section */
+    #hero-section {
+        padding: 4.25rem 6.25rem 3.9rem;
+    }
+
+    .hero-section-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+
+    .hero-section-header h1 {
+        gap: 1.5rem;
+    }
+
+    .hero-section-header h1>span:first-child {
+        font-size: 4.5rem;
+        line-height: 5rem;
+        letter-spacing: -0.09rem;
+    }
+
+    .hero-section-header h1>span:nth-child(2) {
+        font-size: 12.5rem;
+        line-height: 10.625rem;
+        letter-spacing: -0.25rem;
+    }
+
+    .hero-section-header h1>span:nth-child(3) {
+        letter-spacing: 1.2rem;
+        margin-bottom: 0;
+    }
+}
