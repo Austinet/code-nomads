@@ -1,26 +1,44 @@
 @import url("variables-reset.css");
 
+/* * {
+    border: 1px solid #fff;
+} */
+
 /* General Style */
 body {
     background-color: var(--black);
+}
+
+.container-width {
+    padding: 2rem 1.5rem;
+    max-width: 1350px;
+    margin: 0 auto;
 }
 
 .close {
     display: none;
 }
 
+.flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* Header/Navigation section with links */
 header {
     background-color: var(--black);
-    padding: 2rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 2;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 nav {
@@ -32,7 +50,7 @@ nav {
 nav .nav-links a {
     font-family: "Inter", sans-serif;
     color: var(--ash-color);
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 1.875rem;
     letter-spacing: 0.015rem;
@@ -65,28 +83,8 @@ nav .login-signup li:first-child::after {
 
 
 /* Hero section */
-#hero-section {
-    padding: 6.31rem 1.56rem 5.62rem;
-}
-
-.hero-image {
-    width: 18.85769rem;
-    height: 19.54388rem;
-    position: relative;
-    flex-shrink: 0;
-    background: url("../assets/images/hero-bg.png"), 0px -0.21px / 154.275% 100.081% no-repeat;
-    background-size: cover;
-    margin-left: auto;
-}
-
-.hero-image .gradient {
-    width: 125%;
-    height: 9.53881rem;
-    position: absolute;
-    bottom: 0;
-    right: -1.4rem;
-    background: url(../assets/images/gradient.png) no-repeat;
-    background-size: cover;
+.hero-section-container {
+    padding: 6.31rem 1.5rem 0;
 }
 
 .hero-section-header h1 {
@@ -125,12 +123,71 @@ nav .login-signup li:first-child::after {
     margin-bottom: 2.12rem;
 }
 
-.scroll-down {
+.hero-image {
+    width: 18.85769rem;
+    height: 19.54388rem;
+    position: relative;
+    flex-shrink: 0;
+    background: url("../assets/images/hero-bg.png"), 0px -0.21px / 154.275% 100.081% no-repeat;
+    background-size: cover;
+    margin-left: auto;
+}
+
+.hero-image .gradient {
+    width: 125%;
+    height: 9.53881rem;
+    position: absolute;
+    bottom: 0;
+    right: -1.4rem;
+    background: url(../assets/images/gradient.png) no-repeat;
+    background-size: cover;
+}
+
+.enroll-container h2 {
+    color: var(--ash-color);
+    text-align: right;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.04rem;
+    width: 9.8125rem;
+    margin: 0.75rem 0 2.19rem auto;
+}
+
+.enroll-container .btn {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    background-color: var(--black);
+    outline: none;
+    color: var(--ash-color);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: normal;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    border: 1px solid var(--ash-color);
+}
+
+.enroll-container .btn > span:nth-child(1) {
+    padding: 0.9375rem 1.5rem;
+    width: 100%;
+}
+
+.enroll-container .btn > span:nth-child(2) {
+    padding: 0.875rem;
+    background: var(--code-nomads-green);
+}
+
+.enroll-container .socials {
+    display: none;
+}
+
+.scroll-down {
+    flex-direction: column;
     gap: 0.75rem;
+    margin-bottom: 1.5rem;
 }
 
 .scroll-down a {
@@ -148,19 +205,12 @@ nav .login-signup li:first-child::after {
     text-transform: uppercase;
 }
 
-
-/* Code anywhere */
-#code-anywhere {
-    background: var(--black);
-    padding: 0 1.5rem 2.88rem;
-}
-
+/* Code anywhere section */
 .code-anywhere-container {
     display: flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
     gap: 2.62rem;
+    padding-bottom: 2.88rem;
 }
 
 .code-anywhere-details {
@@ -170,30 +220,24 @@ nav .login-signup li:first-child::after {
 }
 
 .code-anywhere-details h2 {
-    font-family: "Satoshi Variable", sans-serif;
     font-size: 2rem;
-    font-style: normal;
     font-weight: 700;
     line-height: normal;
-
 }
 
 .code-anywhere-details h2 span:first-child {
-    /* width: 15.0625rem; */
     color: var(--gray-text);
     display: block;
     margin-bottom: 0.25rem;
 }
 
 .code-anywhere-details h2 span:nth-child(2) {
-    /* width: 15.0625rem; */
     color: var(--code-nomads-green);
     display: block;
 }
 
 .code-anywhere-details p {
     color: var(--white);
-    font-family: Satoshi Variable;
     font-size: 1rem;
     font-weight: 400;
     line-height: normal;
@@ -201,19 +245,13 @@ nav .login-signup li:first-child::after {
 }
 
 .code-anywhere-details button {
-    display: flex;
     width: 9.3125rem;
     padding: 0.375rem 3rem;
-    justify-content: center;
-    align-items: center;
-    gap: 0.25rem;
     border-radius: 0.125rem;
     border: 1px solid var(--ash-color);
     box-shadow: 0px 4px 10px 0px rgba(192, 181, 181, 0.10) inset;
-    color: #FFF;
+    color: var(--white);
     text-align: center;
-
-    font-family: Satoshi Variable;
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.875rem;
@@ -223,20 +261,21 @@ nav .login-signup li:first-child::after {
 
 .code-anywhere-image {
     width: 100%;
+    max-width: 48rem;
 }
-
 
 .code-anywhere-image img {
     width: 100%;
 }
 
 /* Course timeline section */
-
-#course-timeline {
-    background-color: var(--black);
+.course-timeline-container {
     color: var(--ash-color);
-
-    padding: 2.88rem 0.88rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.88rem 0;
 }
 
 .course-card {
@@ -252,13 +291,10 @@ nav .login-signup li:first-child::after {
 .course-card button {
     border-radius: 1.5rem;
     background: var(--code-nomads-green);
-    display: flex;
     padding: 0.5rem 0.75rem;
-    justify-content: center;
-    align-items: center;
     gap: 0.25rem;
     margin-bottom: 1rem;
-    color: var(--ash-color, rgba(243, 243, 243, 0.95));
+    color: var(--ash-color);
 
     font-family: Satoshi Variable;
     font-size: 0.8125rem;
@@ -530,58 +566,6 @@ height: 2rem; */
 
 
 
-/* .enroll-container */
-.enroll-container h2 {
-    color: var(--ash-color);
-    text-align: right;
-    font-family: "Satoshi Variable", "Satoshi", sans-serif;
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 100%;
-    letter-spacing: -0.04rem;
-    width: 9.8125rem;
-    margin: 0.75rem 0 2.19rem auto;
-}
-
-
-
-
-.enroll-container .btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--black);
-    outline: none;
-    color: var(--ash-color);
-    font-family: "Satoshi Variable", "Satoshi", sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: normal;
-    width: 100%;
-    max-width: 500px;
-    margin-left: auto;
-    border: 1px solid var(--ash-color);
-}
-
-.enroll-container .btn span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.enroll-container .btn>span:nth-child(1) {
-    padding: 0.9375rem 1.5rem;
-    width: 100%;
-}
-
-.enroll-container .btn>span:nth-child(2) {
-    padding: 0.875rem;
-    background: var(--code-nomads-green);
-}
-
-.socials {
-    display: none;
-}
 
 
 /* How it works section */
@@ -978,116 +962,8 @@ footer {
 
 /* Large Screen */
 @media screen and (min-width: 1024px) {
-    /* Code anywhere */
-
-    #code-anywhere {
-        padding: 0 9.69rem 5.84rem;
-    }
-
-    .code-anywhere-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 2.8rem;
-    }
-
-    .code-anywhere-details {
-        /* display: flex;
-    flex-direction: column; */
-        gap: 1.5rem;
-        width: 20.625rem;
-    }
-
-    .code-anywhere-details h2 {
-        font-size: 2.5rem;
-
-
-    }
-
-    .code-anywhere-details h2 span:first-child {
-        /* width: 15.0625rem; */
-        color: var(--gray-text);
-        display: block;
-    }
-
-    .code-anywhere-details h2 span:nth-child(2) {
-        /* width: 15.0625rem; */
-        color: var(--code-nomads-green);
-        display: block;
-    }
-
-    .code-anywhere-details p {
-        font-size: 1.25rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .code-anywhere-details button {
-        display: flex;
-        width: 9.3125rem;
-        padding: 0.375rem 3rem;
-        justify-content: center;
-        align-items: center;
-        gap: 0.25rem;
-        border-radius: 0.125rem;
-        border: 1px solid var(--ash-color);
-        box-shadow: 0px 4px 10px 0px rgba(192, 181, 181, 0.10) inset;
-        color: var(--white);
-        text-align: center;
-
-        font-family: Satoshi Variable;
-        font-size: 1rem;
-        font-weight: 500;
-        line-height: 1.875rem;
-        letter-spacing: 0.015rem;
-        background: var(--black);
-    }
-
-    .code-anywhere-image {
-        width: 100%;
-        max-width: 48rem;
-    }
-
-    /* Course timeline sect */
-    #course-timeline {
-        padding: 5rem 13.56rem;
-    }
-
-    .course-timeline-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    .course-card {
-        width: 25rem;
-    }
-
-
-    /* .enroll-container */
-    .enroll-container h2 {
-        width: 12.625rem;
-        font-size: 2.5rem;
-    }
-
-    .hero-image {
-        width: 31.178rem;
-        height: 32.3125rem;
-        margin: 0 auto;
-    }
-
-    .hero-image .gradient {
-        height: 15.77088rem;
-    }
-
-    .socials {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-        margin-bottom: 5.31rem;
-        text-align: right;
-    }
-
+   
+  
 
     /* How it works section */
     #how-it-works {

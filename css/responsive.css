@@ -1,4 +1,12 @@
-@media screen and (min-width: 680px) {}
+@media screen and (min-width: 680px) {
+    .hero-section-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+
+}
 
 
 
@@ -7,7 +15,6 @@
     /* Header/Navigation section with links */
     header {
         position: static;
-        padding: 1.5rem 6.25rem;
     }
 
     #menu-btn {
@@ -48,22 +55,7 @@
         text-transform: uppercase;
     }
 
-    nav .nav-links a {
-        font-size: 1rem;
-    }
-
     /* Hero section */
-    #hero-section {
-        padding: 4.25rem 6.25rem 3.9rem;
-    }
-
-    .hero-section-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
-
-
     .hero-section-header h1 {
         gap: 1.5rem;
     }
@@ -83,5 +75,88 @@
     .hero-section-header h1>span:nth-child(3) {
         letter-spacing: 1.2rem;
         margin-bottom: 0;
+    }
+
+    .enroll-container h2 {
+        width: 12.625rem;
+        font-size: 2.5rem;
+    }
+
+     /* Code anywhere section*/
+    .code-anywhere-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 5.84rem;
+    }
+
+    .code-anywhere-details h2 {
+        font-size: 2.5rem;
+    }
+
+    .code-anywhere-details p {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+      /* Course timeline sect */
+      #course-timeline {
+        padding: 5rem 10rem;
+    }
+
+    .course-timeline-container {
+       flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .course-card {
+        width: 25rem;
+    }
+
+}
+
+@media screen and (min-width: 1300px) {
+    .container-width {
+        max-width: 91%;
+    }
+
+    /* Hero section */
+    .hero-section-container {
+        align-items: flex-end;
+        padding: 4.25rem 1.5rem 3.9rem;
+    }
+    .hero-section-right {
+        display: flex;
+        gap: 5rem;
+        justify-content: space-between;
+        align-items: flex-end;
+    } 
+
+    .hero-image {
+        width: 31.178rem;
+        height: 32.3125rem;
+        margin: 0 auto;
+    }
+
+    .hero-image .gradient {
+        height: 15.77088rem;
+    }
+
+    .enroll-container .socials {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 5.31rem;
+        text-align: right;
+    }
+
+    .scroll-down {
+        margin-bottom: 2.5rem;
+    }
+
+   /* Code anywhere section */ 
+    .code-anywhere-details {
+        width: 20.625rem;
     }
 }

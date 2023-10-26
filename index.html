@@ -14,84 +14,89 @@
 <body>
     <header>
         <!-- Navigation section with links -->
-        <nav>
-            <div class="logo-container">
-                <img src="assets/icons/logo.svg" alt="CodeNomads logo">
-            </div>
-            <div class="nav-links close">
-                <ul class="links">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="">Courses</a>
-                    </li>
-                    <li>
-                        <a href="">How It Works</a>
-                    </li>
-                </ul>
-
-                <ul class="login-signup">
-                    <li>
-                        <a href="">Log In</a>
-                    </li>
-                    <li>
-                        <a href="">Sign up</a>
-                    </li>
-                    <li>
-                        <img src="assets/icons/flame.svg" alt="flame" class="flame">
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- Hamburger menu for mobile screens -->
-        <button id="menu-btn">
-            <img src="assets/icons/menu.svg" alt="menu">
-        </button>
+        <div class="header-container container-width">
+            <nav>
+                <div class="logo-container">
+                    <img src="assets/icons/logo.svg" alt="CodeNomads logo">
+                </div>
+                <div class="nav-links close">
+                    <ul class="links">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="">Courses</a>
+                        </li>
+                        <li>
+                            <a href="">How It Works</a>
+                        </li>
+                    </ul>
+    
+                    <ul class="login-signup">
+                        <li>
+                            <a href="">Log In</a>
+                        </li>
+                        <li>
+                            <a href="">Sign up</a>
+                        </li>
+                        <li>
+                            <img src="assets/icons/flame.svg" alt="flame" class="flame">
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Hamburger menu for mobile screens -->
+            <button id="menu-btn">
+                <img src="assets/icons/menu.svg" alt="menu">
+            </button>
+        </div>
+ 
     </header>
 
     <main>
         <!-- Hero section -->
         <section id="hero-section">
-            <div class="hero-section-container">
+            <div class="hero-section-container container-width">
                 <div class="hero-section-header">
                     <h1><span>CODING MASTERY IN JUST</span> <span>03</span> <span>MONTHS</span></h1>
                 </div>
-                <div class="hero-image">
-                    <div class="gradient">
+                <div class="hero-section-right">
+                    <div class="hero-image">
+                        <div class="gradient">
+                        </div>
+                    </div>
+                    <div class="enroll-container">
+                        <h2>Your Fast Track to Becoming a Coder</h2>
+                        <ul class="socials">
+                            <li>
+                                <a href=""><img src="assets/icons/ri_twitter-fill.svg" alt="twitter"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="assets/icons/ic_round-tiktok.svg" alt="tiktok"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="assets/icons/uil_instagram.svg" alt="instagram"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="assets/icons/bxl_facebook.svg" alt="facebook"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="assets/icons/ri_linkedin-fill.svg" alt="linkedin"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="assets/icons/jam_medium.svg" alt="medium"></a>
+                            </li>
+                        </ul>
+                        <a href="" class="btn">
+                            <span class="flex-center-center">ENROLL</span>
+                            <span class="flex-center-center">
+                                <img src="assets/icons/arrow-right-02-sharp.svg" alt="arrow pointing right">
+                            </span>
+                        </a>
                     </div>
                 </div>
-                <div class="enroll-container">
-                    <h2>Your Fast Track to Becoming a Coder</h2>
-                    <ul class="socials">
-                        <li>
-                            <a href=""><img src="assets/icons/ri_twitter-fill.svg" alt="twitter"></a>
-                        </li>
-                        <li>
-                            <a href=""><img src="assets/icons/ic_round-tiktok.svg" alt="tiktok"></a>
-                        </li>
-                        <li>
-                            <a href=""><img src="assets/icons/uil_instagram.svg" alt="instagram"></a>
-                        </li>
-                        <li>
-                            <a href=""><img src="assets/icons/bxl_facebook.svg" alt="facebook"></a>
-                        </li>
-                        <li>
-                            <a href=""><img src="assets/icons/ri_linkedin-fill.svg" alt="linkedin"></a>
-                        </li>
-                        <li>
-                            <a href=""><img src="assets/icons/jam_medium.svg" alt="medium"></a>
-                        </li>
-                    </ul>
-                    <a href="" class="btn">
-                        <span>ENROLL</span>
-                        <span>
-                            <img src="assets/icons/arrow-right-02-sharp.svg" alt="arrow pointing right">
-                        </span>
-                    </a>
-                </div>
             </div>
-            <div class="scroll-down">
+            <div class="scroll-down flex-center-center">
                 <p>scroll down</p>
                 <a href="#footer">
                     <img src="assets/icons/arrow-down.svg" alt="arrow down">
@@ -99,8 +104,9 @@
             </div>
         </section>
 
+        <!-- Code anywhere section -->
         <section id="code-anywhere">
-            <div class="code-anywhere-container">
+            <div class="code-anywhere-container container-width">
                 <div class="code-anywhere-details">
                     <h2>
                         <span>CODE ANYWHERE</span>
@@ -109,19 +115,19 @@
                     <p>
                         .NET Development with Zero Coding Experience to Job Ready in Months
                     </p>
-                    <button>Enroll</button>
-
+                    <button class="flex-center-center">Enroll</button>
                 </div>
                 <div class="code-anywhere-image">
                     <img src="assets/images/code-editor.svg" alt="code editor">
                 </div>
-
             </div>
         </section>
+
+        <!-- Course timeline section -->
         <section id="course-timeline">
-            <div class="course-timeline-container">
+            <div class="course-timeline-container container-width">
                 <div class="course-card">
-                    <button>REMOTELY</button>
+                    <button class="flex-center-center">REMOTELY</button>
                     <h2>Course Timeline</h2>
                     <div class="course-duration">
                         <ul>
