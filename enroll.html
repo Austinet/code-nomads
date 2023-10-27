@@ -8,73 +8,82 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo-container">
-                <img src="images/logo.png" alt="CodeNomads logo">
-            </div>
-            <div class="nav-links close">
-                <ul class="links">
-                    <li>
-                        <a href="index.html">HOME</a>
-                    </li>
-                    <li>
-                        <a href="">COURSES</a>
-                    </li>
-                    <li>
-                        <a href="">HOW IT WORKS</a>
-                    </li>
-                </ul>
+        <!-- Navigation section with links -->
+        <div class="header-container container-width">
+            <nav>
+                <div class="logo-container">
+                    <img src="assets/icons/logo.svg" alt="CodeNomads logo">
+                </div>
+                <div class="nav-links close">
+                    <ul class="links">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="">Courses</a>
+                        </li>
+                        <li>
+                            <a href="">How It Works</a>
+                        </li>
+                    </ul>
 
-                <ul class="login-signup">
-                    <li>
-                        <a href="">Log In</a>
-                    </li>
-                    <li>
-                        <a href="enroll.html">Sign up</a>
-                    </li>
-                    <li>
-                        <img src="images/Flame.svg" alt="flame" class="flame">
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <button id="menu-btn">
-            <img src="images/menu-02.svg" alt="menu">
-        </button>
+                    <ul class="login-signup">
+                        <li>
+                            <a href="">Log In</a>
+                        </li>
+                        <li>
+                            <a href="">Sign up</a>
+                        </li>
+                        <li>
+                            <img src="assets/icons/flame.svg" alt="flame" class="flame">
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Hamburger menu for mobile screens -->
+            <button id="menu-btn">
+                <img src="assets/icons/menu.svg" alt="menu">
+            </button>
+        </div>
     </header>
-    <main id="enroll">
-        <section class="enroll-form-container">
+
+    <main>
+        <!-- Enroll form section -->
+        <section class="enroll-form-container container-width">
             <div class="enroll-form-header">
-                <h2><span>Enroll for </span><img src="images/logo-green.svg" alt="CodeNomads logo"><span>6 Weeks Course</span></h2>
+                <h2 class="flex-center-center"><span>Enroll for </span><img src="assets/icons/logo.svg" alt="CodeNomads logo"><span>6 Weeks Course</span></h2>
             </div>
             <form>
                 <div class="email-container">
                     <label for="email">Email Address</label>
                     <input type="email" name="email" id="email" placeholder="enter address here" required>
-                    <img src="images/mail-at-sign-01.svg" alt="mail">
+                    <img src="assets/icons/mail-at-sign-01.svg" alt="mail">
                 </div>
                 <div>
                     <label for="message">Message <span>optional</span></label>
                     <textarea name="message" id="message"></textarea>
                 </div>
-                <button type="submit">Submit</button>
+                <button class="flex-center-center" type="submit">Submit</button>
             </form>
         </section>
     </main>
-    <footer>
-        <div class="footer-container">
+
+    <!-- Footer section -->
+    <footer id="footer">
+        <div class="footer-container container-width">
             <div class="footer-intro">
-                <img src="images/footer-logo.svg" alt="logo">
+                <img src="assets/icons/logo.svg" alt="logo">
                 <h3><span>Code </span>AnyWhere <span>Work</span> AnyWhere</h3>
                 <p>
-                    Learn In-demand developer skills with codeNomads and break into tech for a Six-figure income in Months!
+                    Learn In-demand developer skills with codeNomads and break into tech for a Six-figure income in
+                    Months!
                 </p>
                 <div class="call">
-                    <img src="images/call.svg" alt="call">
+                    <img src="assets/icons/call.svg" alt="call">
                     <p>240 - 390 - 5164</p>
                 </div>
             </div>
-            <div class="quicklink-signup-container">
+            <div class="quicklink-signup-container flex-center-center">
                 <ul class="quicklink-signup">
                     <li>
                         <a href="">Log In</a>
@@ -87,7 +96,7 @@
             <div>
                 <ul class="quicklink-nav">
                     <li>
-                        <a href="/">HOME</a>
+                        <a href="#">HOME</a>
                     </li>
                     <li>
                         <a href="">COURSES</a>
@@ -97,19 +106,31 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer-socials-container">
+            <div class="footer-socials-container flex-center-center">
                 <ul class="footer-socials">
-                    <li><a href=""><img src="images/ri_twitter-fill.svg" alt="twitter"></a></li>
-                    <li><a href=""><img src="images/ic_round-tiktok.svg" alt="tiktok"></a></li>
-                    <li><a href=""><img src="images/uil_instagram.svg" alt="instagram"></a></li>
-                    <li><a href=""><img src="images/bxl_facebook.svg" alt="facebook"></a></li>
-                    <li><a href=""><img src="images/ri_linkedin-fill.svg" alt="linkedin"></a></li>
-                    <li><a href=""><img src="images/jam_medium.svg" alt="medium"></a></li>
+                    <li>
+                        <a href=""><img src="assets/icons/ri_twitter-fill.svg" alt="twitter"></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="assets/icons/ic_round-tiktok.svg" alt="tiktok"></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="assets/icons/uil_instagram.svg" alt="instagram"></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="assets/icons/bxl_facebook.svg" alt="facebook"></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="assets/icons/ri_linkedin-fill.svg" alt="linkedin"></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="assets/icons/jam_medium.svg" alt="medium"></a>
+                    </li>
                 </ul>
             </div>
-            <div class="scroll-up">
-                <a href="#">
-                    <img src="images/arrow-up.svg" alt="arrow up">
+            <div class="scroll-up flex-center-center">
+                <a href="#" class="flex-center-center">
+                    <img src="assets/icons/arrow-up.svg" alt="arrow up">
                 </a>
                 <p>scroll up</p>
             </div>

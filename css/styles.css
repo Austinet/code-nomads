@@ -1,7 +1,7 @@
 @import url("variables-reset.css");
 
 /* * {
-    border: 1px solid #fff;
+    border: 1px solid #000;
 } */
 
 /* General Style */
@@ -11,6 +11,7 @@ body {
 
 .container-width {
     padding: 2rem 1.5rem;
+    width: 100%;
     max-width: 1350px;
     margin: 0 auto;
 }
@@ -32,6 +33,7 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
     z-index: 2;
 }
 
@@ -95,7 +97,7 @@ nav .login-signup li:first-child::after {
     color: var(--ash-color);
 }
 
-.hero-section-header h1 > span:first-child {
+.hero-section-header h1>span:first-child {
     font-size: 4rem;
     font-weight: 400;
     line-height: 3.75rem;
@@ -105,7 +107,7 @@ nav .login-signup li:first-child::after {
     display: block;
 }
 
-.hero-section-header h1 > span:nth-child(2) {
+.hero-section-header h1>span:nth-child(2) {
     color: var(--code-nomads-green);
     font-size: 9.375rem;
     font-weight: 700;
@@ -170,12 +172,12 @@ nav .login-signup li:first-child::after {
     border: 1px solid var(--ash-color);
 }
 
-.enroll-container .btn > span:nth-child(1) {
+.enroll-container .btn>span:nth-child(1) {
     padding: 0.9375rem 1.5rem;
     width: 100%;
 }
 
-.enroll-container .btn > span:nth-child(2) {
+.enroll-container .btn>span:nth-child(2) {
     padding: 0.875rem;
     background: var(--code-nomads-green);
 }
@@ -244,7 +246,7 @@ nav .login-signup li:first-child::after {
     letter-spacing: 0.015rem;
 }
 
-.code-anywhere-details button {
+.code-anywhere-details a {
     width: 9.3125rem;
     padding: 0.375rem 3rem;
     border-radius: 0.125rem;
@@ -256,7 +258,6 @@ nav .login-signup li:first-child::after {
     font-weight: 500;
     line-height: 1.875rem;
     letter-spacing: 0.015rem;
-    background: var(--black);
 }
 
 .code-anywhere-image {
@@ -279,7 +280,8 @@ nav .login-signup li:first-child::after {
 }
 
 .course-card {
-    width: 21.75rem;
+    width: 90%;
+    max-width: 25rem;
     height: 29.125rem;
     padding: 3.62rem 1.47rem;
     border-radius: 0.5rem;
@@ -295,19 +297,14 @@ nav .login-signup li:first-child::after {
     gap: 0.25rem;
     margin-bottom: 1rem;
     color: var(--ash-color);
-
-    font-family: Satoshi Variable;
     font-size: 0.8125rem;
-    font-style: normal;
     font-weight: 500;
     line-height: normal;
     border: none;
 }
 
 .course-card h2 {
-    font-family: Satoshi Variable;
     font-size: 2rem;
-    font-style: normal;
     font-weight: 500;
     line-height: normal;
     letter-spacing: -0.04rem;
@@ -332,18 +329,15 @@ nav .login-signup li:first-child::after {
 
 .course-duration li:nth-child(1)::after {
     content: '/';
-    /* margin-left: 0.5rem; */
     color: var(--ash-color);
     font-size: 1rem;
     font-weight: 500;
-    font-family: Satoshi Variable;
     line-height: 1.875rem;
     letter-spacing: 0.015rem;
 }
 
 .course-duration p {
     color: var(--ash-color);
-    font-family: Satoshi Variable;
     font-size: 0.8125rem;
     font-weight: 500;
     line-height: normal;
@@ -351,33 +345,25 @@ nav .login-signup li:first-child::after {
 
 .students {
     margin-top: 7.7rem;
-    /* position: relative; */
-
-
 }
 
 .students ul {
     display: flex;
-    /* transform: rotate(-0.027deg); */
     align-items: center;
     gap: -1.25rem;
     position: relative;
 }
 
 .students img {
-    /* width: 2rem;
-height: 2rem; */
     transform: rotate(11.296deg);
     border-radius: 2rem;
     background: lightgray 50% / cover no-repeat;
     mix-blend-mode: luminosity;
-
 }
 
 .students li {
     position: relative;
 }
-
 
 .students li:nth-child(2) {
     left: -1rem;
@@ -393,7 +379,6 @@ height: 2rem; */
 
 .students p {
     color: var(--ash-color);
-    font-family: Satoshi Variable;
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.875rem;
@@ -410,7 +395,6 @@ height: 2rem; */
 .skills h2 {
     color: var(--gray-30-percent);
     text-align: center;
-    font-family: Satoshi Variable;
     font-size: 12.5rem;
     font-weight: 700;
     line-height: 10.625rem;
@@ -421,11 +405,7 @@ height: 2rem; */
 .skills h3 {
     color: var(--gray-text);
     text-align: center;
-
-    /* taggline big text */
-    font-family: Satoshi Variable;
     font-size: 2rem;
-    font-style: normal;
     font-weight: 500;
     line-height: normal;
     letter-spacing: 1.2rem;
@@ -445,20 +425,17 @@ height: 2rem; */
 }
 
 
-
-
-/* Courses section */
-#courses {
-    background-color: var(--black);
+/* Courses and sub content section */
+.courses-container {
     color: var(--ash-color);
-    padding: 2.94rem 1.62rem 2.32rem;
+    padding: 2.94rem 1.5rem 2.32rem;
 }
 
 .course-tabs ul {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 1.2rem;
 }
-
 
 .course-tabs button {
     display: flex;
@@ -468,7 +445,6 @@ height: 2rem; */
     gap: 0.25rem;
     background-color: var(--black);
     color: var(--ash-color);
-    font-family: Satoshi Variable;
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.875rem;
@@ -481,7 +457,6 @@ height: 2rem; */
 }
 
 .courses-header h2 {
-    font-family: Satoshi Variable;
     font-size: 1.5rem;
     font-weight: 500;
     line-height: normal;
@@ -497,17 +472,14 @@ height: 2rem; */
 
 .courses-header li:not(.courses-header li:nth-child(3))::after {
     content: '/';
-    /* margin-left: 0.5rem; */
     color: var(--ash-color);
     font-size: 1rem;
     font-weight: 500;
-    font-family: Satoshi Variable;
     line-height: 1.875rem;
     letter-spacing: 0.015rem;
 }
 
 .courses-header p {
-    font-family: Satoshi Variable;
     font-size: 0.6875rem;
     font-weight: 500;
     line-height: normal;
@@ -519,9 +491,10 @@ height: 2rem; */
     justify-content: space-between;
     border-bottom: 0.5px solid var(--gray-30-percent);
     padding: 1.5rem 0;
-
 }
 
+.course-content ul,
+.course-content li,
 .course-title-container {
     display: flex;
     align-items: center;
@@ -529,60 +502,36 @@ height: 2rem; */
 }
 
 .course-title-container p {
-    font-family: Satoshi Variable;
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.875rem;
-    /* 187.5% */
     letter-spacing: 0.015rem;
 }
 
 .course-content ul p {
-    font-family: Satoshi Variable;
     font-size: 0.6875rem;
-    font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
 
-.course-content ul,
-.course-content li {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
 .course-content li:first-child::after {
     content: '/';
-    /* margin-left: 0.5rem; */
     color: var(--ash-color);
     font-size: 1rem;
     font-weight: 500;
-    font-family: Satoshi Variable;
     line-height: 1.875rem;
     letter-spacing: 0.015rem;
 }
 
 
-
-
-
-
 /* How it works section */
-#how-it-works {
-    padding: 2.32rem 1.75rem 3.88rem;
-    background-color: var(--black);
-    position: relative;
-}
-
 .how-it-works-container {
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    padding: 2.32rem 1.5rem 3.88rem;
 }
 
 .how-it-works-header h3 {
     color: var(--gray-text);
-    font-family: Satoshi Variable;
     font-size: 0.8125rem;
     font-weight: 500;
     line-height: normal;
@@ -591,9 +540,7 @@ height: 2rem; */
 
 .how-it-works-header h2 {
     color: var(--ash-color);
-    font-family: Satoshi Variable;
     font-size: 2.5rem;
-    font-style: normal;
     font-weight: 400;
     line-height: 2.5rem;
     margin-bottom: 2.62rem;
@@ -602,54 +549,43 @@ height: 2rem; */
 .button-container {
     position: absolute;
     bottom: -1.5rem;
+    left: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
 }
 
-.how-it-works-header button {
+.how-it-works-header a {
     display: flex;
     border: none;
 }
 
-.how-it-works-header button span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.how-it-works-header button>span:nth-child(1) {
+.how-it-works-header a > span:nth-child(1) {
     padding: 0.9375rem 1.5rem;
     gap: 0.25rem;
-    /* flex: 1 0 0; */
     width: 17.0625rem;
     height: 3.25rem;
     border: 1px solid var(--ash-color);
     color: var(--ash-color);
     background-color: var(--black);
-    font-family: Satoshi Variable;
     font-size: 1rem;
     font-weight: 400;
     line-height: normal;
 }
 
-.how-it-works-header button>span:nth-child(2) {
-
+.how-it-works-header a > span:nth-child(2) {
     gap: 0.75rem;
     background: var(--code-nomads-green);
-
     width: 3.25rem;
     height: 3.25rem;
     padding: 0.625rem;
-
 }
-
 
 .steps {
     display: flex;
-    /* flex-direction: column; */
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1.25rem;
     max-width: 51.25rem;
 }
@@ -659,17 +595,14 @@ height: 2rem; */
     border: 2px solid #1F2123;
     background: linear-gradient(180deg, #0C0C0C 0%, #010101 100%);
     display: flex;
-    width: 21.875rem;
     gap: 0.75rem;
     padding: 1.5rem 1rem;
-    /* flex-direction: column; */
     align-items: flex-start;
+    width: 100%;
 }
-
 
 .card>h3 {
     color: var(--code-nomads-green);
-    font-family: Satoshi Variable;
     font-size: 1.25rem;
     font-weight: 300;
     line-height: normal;
@@ -677,7 +610,6 @@ height: 2rem; */
 
 .card-details>h3 {
     color: var(--ash-color);
-    font-family: Satoshi Variable;
     font-size: 1.125rem;
     font-weight: 500;
     line-height: normal;
@@ -687,49 +619,33 @@ height: 2rem; */
 
 .card p {
     color: var(--gray-text);
-
-    font-family: Satoshi Variable;
     font-size: 1rem;
     font-weight: 400;
     line-height: normal;
 }
 
 /* Be a .NET Developer section */
-#apply {
-    background-color: var(--black);
-    padding: 3.88rem 1.40rem 0;
-}
-
 .apply-container {
     display: flex;
     flex-direction: column;
-
+    padding: 3.88rem 1.5rem 0;
 }
 
 .apply-container .dot-net h2 {
-    color: rgba(132, 132, 132, 0.30);
-    font-family: Satoshi Variable;
-    font-size: 5rem;
+    color: var(--gray-30-percent);
+    font-size: 4.5rem;
     margin-bottom: 2.38rem;
-
     font-weight: 300;
-    line-height: 5rem;
-    /* 100% */
+    line-height: 100%;
     letter-spacing: -0.1rem;
 }
 
 .apply-details h3 {
     color: var(--ash-color);
-
-    /* subhero text 40 regular */
-    font-family: Satoshi Variable;
     font-size: 2.5rem;
-    font-style: normal;
     font-weight: 400;
     line-height: 2.5rem;
-    /* 100% */
     margin-bottom: 1.5rem;
-
 }
 
 .apply-details h3 span {
@@ -738,13 +654,11 @@ height: 2rem; */
 
 .apply-details p {
     color: var(--gray-text);
-    font-family: Satoshi Variable;
     font-size: 1.25rem;
     font-weight: 400;
     line-height: normal;
     margin-bottom: 2.12rem;
     max-width: 29.5rem;
-
 }
 
 .contact ul {
@@ -766,35 +680,24 @@ height: 2rem; */
     align-items: center;
 }
 
-.contact li>span:nth-child(2) {
-    width: 15.9375rem;
-    padding: 0.375rem 1.5rem;
-
-    gap: 0.25rem;
-    border: 1px solid var(--gray-text);
-
-    color: var(--ash-color);
-
-    /* Meduim 16 text */
-    font-family: Satoshi Variable;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.875rem;
-    /* 187.5% */
-    letter-spacing: 0.015rem;
-}
-
 .contact li>span:nth-child(1) {
-
     border: 1px solid var(--code-nomads-green);
-
     width: 2.75rem;
     height: 2.75rem;
     padding: 0.625rem;
-
 }
 
+.contact li>span:nth-child(2) {
+    width: 15.9375rem;
+    padding: 0.375rem 1.5rem;
+    gap: 0.25rem;
+    border: 1px solid var(--gray-text);
+    color: var(--ash-color);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.875rem;
+    letter-spacing: 0.015rem;
+}
 
 .codeNomads-text h2 {
     /* color: var(--shade-black); */
@@ -805,7 +708,6 @@ height: 2rem; */
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: Satoshi Variable;
     font-size: 3.375rem;
     font-weight: 700;
     line-height: normal;
@@ -818,13 +720,15 @@ height: 2rem; */
 /* Footer section */
 footer {
     background: var(--shade-black);
-    padding: 1.69rem 1rem 1.44rem;
     position: relative;
+}
+
+.footer-container {
+    padding: 1.69rem 1.5rem 1.44rem;
 }
 
 .footer-intro h3 {
     color: var(--white);
-    font-family: Satoshi Variable;
     font-size: 0.75rem;
     font-weight: 400;
     line-height: 1.875rem;
@@ -837,10 +741,6 @@ footer {
 
 .footer-intro>p {
     color: var(--gray-text);
-    font-family: Satoshi Variable;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: normal;
     margin: 1rem 0;
 }
 
@@ -856,8 +756,6 @@ footer {
 
 .call p {
     color: var(--ash-color);
-    font-family: Satoshi Variable;
-    font-size: 1rem;
     font-weight: 500;
     line-height: 1.875rem;
     letter-spacing: 0.015rem;
@@ -872,7 +770,6 @@ footer {
 
 .quicklink-nav a {
     color: var(--white);
-    font-family: Satoshi Variable;
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.875rem;
@@ -880,15 +777,11 @@ footer {
 }
 
 .scroll-up {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 0.62rem;
     position: absolute;
     right: 2rem;
     bottom: 12.1rem;
-
 }
 
 .scroll-up a {
@@ -896,29 +789,19 @@ footer {
     background: var(--gray-text);
     height: 4rem;
     width: 2.2rem;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    /* padding: 0.375rem 1.25rem; */
-
-
 }
 
 .scroll-up p {
     color: var(--gray-text);
-    font-family: Satoshi Variable;
     font-size: 0.875rem;
     font-weight: 500;
-    line-height: normal;
 }
 
 .footer-socials-container {
     position: absolute;
+    left: 0;
     width: 100%;
     bottom: 5.94rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .footer-socials {
@@ -933,18 +816,14 @@ footer {
 
 .quicklink-signup-container {
     position: absolute;
+    left: 0;
     width: 100%;
     bottom: 1.44rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .quicklink-signup a {
     color: var(--white);
-    font-family: Satoshi Variable;
     font-size: 1rem;
-    font-style: normal;
     font-weight: 500;
     line-height: 1.875rem;
     letter-spacing: 0.015rem;
@@ -953,320 +832,7 @@ footer {
 .copyright p {
     text-align: center;
     color: var(--gray-text);
-    font-family: Satoshi Variable;
     font-size: 0.8125rem;
-    font-style: normal;
     font-weight: 900;
     line-height: normal;
-}
-
-/* Large Screen */
-@media screen and (min-width: 1024px) {
-   
-  
-
-    /* How it works section */
-    #how-it-works {
-        padding: 5rem 9.19rem 7.75rem;
-        background-color: var(--black);
-        position: relative;
-    }
-
-    .how-it-works-container {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 5rem;
-    }
-
-    .button-container {
-        position: static;
-    }
-
-    .how-it-works-header {
-        max-width: 15.4375rem;
-    }
-
-    .how-it-works-header h2 {
-        margin-bottom: 3rem;
-        font-size: 2.5rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 2.5rem;
-
-    }
-
-
-
-    .how-it-works-header button {
-        display: flex;
-        border: none;
-    }
-
-    .how-it-works-header button span {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-
-    .how-it-works-header button>span:nth-child(1) {
-        padding: 0.9375rem 1.5rem;
-        gap: 0.25rem;
-        flex: 1 0 0;
-        width: 17.0625rem;
-        height: 3.25rem;
-        border: 1px solid var(--ash-color);
-        color: var(--ash-color);
-        background-color: var(--black);
-        font-family: Satoshi Variable;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: normal;
-    }
-
-    .how-it-works-header button>span:nth-child(2) {
-        /* border: 1px solid var(--code-nomads-green); */
-        background: var(--code-nomads-green);
-        gap: 0.75rem;
-        width: 3.25rem;
-        height: 3.25rem;
-        padding: 0.625rem;
-
-    }
-
-    .steps {
-        display: flex;
-        /* flex-direction: column; */
-        flex-wrap: wrap;
-        gap: 1.25rem;
-    }
-
-    .card {
-        border-radius: 0.75rem;
-        border: 2px solid #1F2123;
-        background: linear-gradient(180deg, #0C0C0C 0%, #010101 100%);
-        display: flex;
-        width: 21.875rem;
-        gap: 0.75rem;
-        padding: 1.5rem 1rem;
-        /* flex-direction: column; */
-        align-items: flex-start;
-    }
-
-    .card>h3 {
-        color: var(--code-nomads-green);
-        font-family: Satoshi Variable;
-        font-size: 1.25rem;
-        font-weight: 300;
-        line-height: normal;
-    }
-
-    .card-details>h3 {
-        color: var(--ash-color);
-        font-family: Satoshi Variable;
-        font-size: 1.125rem;
-        font-weight: 500;
-        line-height: normal;
-        margin-bottom: 1.06rem;
-        padding-top: 0.25;
-    }
-
-    .card p {
-        color: var(--gray-text);
-
-        font-family: Satoshi Variable;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: normal;
-    }
-
-    /* Courses  */
-    #courses {
-        padding: 5rem 13.31rem;
-    }
-
-    .courses-container {
-        /* display: flex; */
-        position: relative;
-    }
-
-    .course-tabs {
-        width: 100%;
-        background-color: red;
-        position: relative;
-    }
-
-    .course-tabs ul {
-        flex-direction: row-reverse;
-        position: absolute;
-        /* top: 10rem; */
-        top: 17rem;
-        left: -19%;
-        transform: rotate(-90deg);
-        width: 600px;
-    }
-
-    .courses-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .courses-header h2 {
-        font-size: 2.5rem;
-        font-weight: 400;
-        line-height: 2.5rem;
-        max-width: 17.5625rem;
-    }
-
-    .course-outline {
-        width: 54.58rem;
-        margin: auto;
-    }
-
-
-    /* Be a .NET Developer section */
-    #apply {
-        background-color: var(--black);
-        padding: 8.5rem 7.81rem 0;
-    }
-
-    .apply-container {
-
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 2rem;
-
-    }
-
-
-    .apply-container .dot-net h2 {
-
-
-        letter-spacing: -0.1rem;
-
-        font-size: 6.25rem;
-
-        line-height: 7.5rem;
-        /* 120% */
-        letter-spacing: -0.125rem;
-        max-width: 28.875rem;
-    }
-
-    .apply-details h3 {
-
-        font-size: 4.5rem;
-
-        line-height: 5rem;
-        letter-spacing: -0.09rem;
-
-    }
-
-    .apply-details p {
-        color: var(--gray-text);
-        font-family: Satoshi Variable;
-        font-size: 1.25rem;
-        font-weight: 400;
-        line-height: 2.1875rem;
-        margin-bottom: 2.5rem;
-        max-width: 23.8125rem;
-
-    }
-
-    .contact ul {
-        display: inline-flex;
-        padding: 0.5rem;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-        margin-bottom: 5.19rem;
-    }
-
-    .contact li {
-        display: flex;
-    }
-
-    .contact li span {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .contact li>span:nth-child(2) {
-        width: 15.9375rem;
-        padding: 0.375rem 1.5rem;
-
-        gap: 0.25rem;
-        border: 1px solid var(--gray-text);
-
-        color: var(--ash-color);
-
-        /* Meduim 16 text */
-        font-family: Satoshi Variable;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.875rem;
-        /* 187.5% */
-        letter-spacing: 0.015rem;
-    }
-
-    .contact li>span:nth-child(1) {
-
-        border: 1px solid var(--code-nomads-green);
-
-        width: 2.75rem;
-        height: 2.75rem;
-        padding: 0.625rem;
-
-    }
-
-
-
-    .codeNomads-text h2 {
-        font-size: 11.25rem;
-        letter-spacing: -0.3375rem;
-        bottom: -3.3rem;
-    }
-
-    /* Footer section */
-    footer {
-        padding: 1.69rem 8.12rem 1.44rem;
-    }
-
-    .footer-container {
-        display: flex;
-        align-items: flex-start;
-        gap: 1.5rem;
-    }
-
-
-    .quicklink-nav {
-        width: 150px;
-        margin-bottom: 0;
-    }
-
-    .scroll-up {
-        position: static;
-        width: 160px;
-    }
-
-
-
-    .footer-socials-container {
-        position: static;
-
-    }
-
-
-    .quicklink-signup {
-        gap: 1.88rem;
-        flex-direction: column;
-
-    }
-
-    .quicklink-signup-container {
-        position: static;
-    }
 }
