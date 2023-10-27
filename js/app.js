@@ -6,6 +6,7 @@ const courses = [
   {
     id: 1,
     name: "FRONTEND",
+    description: "Frontend Development",
     duration: "34HRS",
     days: "2 weeks",
     active: true,
@@ -36,27 +37,28 @@ const courses = [
   {
     id: 2,
     name: "DATABASE",
+    description: "Database",
     duration: "34HRS",
     days: "2 weeks",
     number_of_lectures: "14/28",
     sub_contents: [
       {
-        name: "HTML",
+        name: "SQL Server",
         number_of_lectures: 5,
         duration: "24:30 Mins",
       },
       {
-        name: "CSS",
+        name: "Postgres SQL",
         number_of_lectures: 8,
         duration: "24:30 Mins",
       },
       {
-        name: "React",
+        name: "Oracle",
         number_of_lectures: 2,
         duration: "30:10 Mins",
       },
       {
-        name: "Angular",
+        name: "Mongo DB",
         number_of_lectures: 10,
         duration: "24:30 Mins",
       },
@@ -65,6 +67,7 @@ const courses = [
   {
     id: 3,
     name: "CLOUD",
+    description: "Cloud",
     duration: "34HRS",
     days: "2 weeks",
     number_of_lectures: "14/28",
@@ -95,56 +98,43 @@ const courses = [
     id: 4,
     name: "SERVICES",
     duration: "34HRS",
+    description: "Service",
     days: "2 weeks",
     number_of_lectures: "14/28",
     sub_contents: [
       {
-        name: "HTML",
+        name: ".NET",
         number_of_lectures: 5,
         duration: "24:30 Mins",
       },
       {
-        name: "CSS",
+        name: "Core Web API",
         number_of_lectures: 8,
         duration: "24:30 Mins",
       },
       {
-        name: "React",
+        name: "C#",
         number_of_lectures: 2,
         duration: "30:10 Mins",
-      },
-      {
-        name: "Angular",
-        number_of_lectures: 10,
-        duration: "24:30 Mins",
-      },
+      }
     ],
   },
   {
     id: 5,
     name: "AI",
+    description: "Artificial Intelligence",
     duration: "34HRS",
     days: "2 weeks",
     number_of_lectures: "14/28",
     sub_contents: [
       {
-        name: "HTML",
+        name: "Artificial Intelligence",
         number_of_lectures: 5,
         duration: "24:30 Mins",
       },
       {
-        name: "CSS",
+        name: "Prompt Engineering",
         number_of_lectures: 8,
-        duration: "24:30 Mins",
-      },
-      {
-        name: "React",
-        number_of_lectures: 2,
-        duration: "30:10 Mins",
-      },
-      {
-        name: "Angular",
-        number_of_lectures: 10,
         duration: "24:30 Mins",
       },
     ],
@@ -161,7 +151,7 @@ const renderTab = (courses) => {
     <li>
        <button type="button" onClick="viewCourse(${id})" 
        class="${active ? "active-tab" : ""}
-       ">${name.toUpperCase()}</button>
+       ">${name}</button>
     </li>
     `;
   });
@@ -172,12 +162,12 @@ const renderTab = (courses) => {
 // Renders the course outline dynamically according to the selected course
 const renderCourseOutline = (courses) => {
   const outlineChange = courses.find((course) => course.active === true);
-  const { name, days, number_of_lectures, duration, sub_contents } =
+  const { description, days, number_of_lectures, duration, sub_contents } =
     outlineChange;
 
   courseOutline.innerHTML = ` 
   <div class="courses-header">
-    <h2>${name}</h2>
+    <h2>${description}</h2>
     <div>
         <ul>
             <li>

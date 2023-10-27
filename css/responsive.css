@@ -179,6 +179,7 @@
         font-size: 8.25rem;
         letter-spacing: -0.3375rem;
         bottom: -3.8rem;
+        margin-top: 0;
     }
 
     /* Footer section */
@@ -217,7 +218,7 @@
 
 @media screen and (min-width: 1300px) {
     .container-width {
-        max-width: 90%;
+        max-width: 85%;
     }
 
     /* Hero section */
