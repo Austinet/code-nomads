@@ -86,7 +86,7 @@ nav .login-signup li:first-child::after {
 
 /* Hero section */
 .hero-section-container {
-    padding: 6.31rem 1.5rem 0;
+    padding: 8.5rem 1.5rem 0;
     position: relative;
 }
 
@@ -211,10 +211,11 @@ nav .login-signup li:first-child::after {
 .phone-number {
     display: flex;
     align-items: center;
+    justify-content: center;
     position: absolute;
     left: -4.5rem;
-    top: 40%;
-    transform: rotate(270deg);
+    top: 55%;
+    transform: rotate(90deg);
 }
 
 .phone-number p {
@@ -252,6 +253,7 @@ nav .login-signup li:first-child::after {
     font-size: 2rem;
     font-weight: 700;
     line-height: normal;
+    width: 15.0625rem;
 }
 
 .code-anywhere-details h2 span:first-child {
@@ -289,7 +291,7 @@ nav .login-signup li:first-child::after {
 
 .code-anywhere-image {
     width: 100%;
-    max-width: 48rem;
+    max-width: 50rem;
 }
 
 .code-anywhere-image img {

@@ -96,9 +96,9 @@
     }
 
     .phone-number {
-        transform: rotate(90deg);
         left: unset;
         right: -4.4rem;
+        top: 48%;
     }
 
     /* Code anywhere section*/
@@ -195,7 +195,6 @@
     }
 
     .scroll-up {
-        /* width: 170px; */
         width: 50%;
     }
 
@@ -218,7 +217,7 @@
 
 @media screen and (min-width: 1300px) {
     .container-width {
-        max-width: 91%;
+        max-width: 90%;
     }
 
     /* Hero section */
