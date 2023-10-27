@@ -95,6 +95,12 @@
         font-size: 2.5rem;
     }
 
+    .phone-number {
+        transform: rotate(90deg);
+        left: unset;
+        right: -4.4rem;
+    }
+
     /* Code anywhere section*/
     .code-anywhere-container {
         flex-direction: row;
@@ -189,7 +195,8 @@
     }
 
     .scroll-up {
-        width: 170px;
+        /* width: 170px; */
+        width: 50%;
     }
 
     .quicklink-signup {
