@@ -118,6 +118,17 @@
         margin-bottom: 1.5rem;
     }
 
+    .flare-vector {
+        top: 5%;
+        left: 20%;
+        right: unset;
+    }
+
+    .flare-vector img {
+        width: 400px;
+        height: 500px;
+    }
+
     /* Course timeline section */
     .course-timeline-container {
         flex-direction: row;

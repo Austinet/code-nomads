@@ -240,6 +240,7 @@ nav .login-signup li:first-child::after {
     flex-direction: column;
     gap: 2.62rem;
     padding-bottom: 2.88rem;
+    position: relative;
 }
 
 .code-anywhere-details {
@@ -293,6 +294,19 @@ nav .login-signup li:first-child::after {
 .code-anywhere-image img {
     width: 100%;
 }
+
+.flare-vector {
+    position: absolute;
+    top: 45%;
+    right: 10%;
+    z-index: -1;
+}
+
+.flare-vector img {
+    width: 200px;
+    height: 200px;
+}
+
 
 /* Course timeline section */
 .course-timeline-container {
@@ -618,6 +632,7 @@ nav .login-signup li:first-child::after {
     align-items: center;
     gap: 1.25rem;
     max-width: 51.25rem;
+    position: relative;
 }
 
 .card {
@@ -653,6 +668,7 @@ nav .login-signup li:first-child::after {
     font-weight: 400;
     line-height: normal;
 }
+
 
 /* Be a .NET Developer section */
 .apply-container {
@@ -731,7 +747,7 @@ nav .login-signup li:first-child::after {
 
 .codeNomads-text h2 {
     color: var(--shade-black);
-    text-shadow: var(--text-shadow), var(--text-shadow), var(--text-shadow), var(--text-shadow);
+    text-shadow: var(--text-shadow), var(--text-shadow);
     /* background-image: linear-gradient(#ff1919, #36ff32); */
     font-size: 3.375rem;
     font-weight: 700;
