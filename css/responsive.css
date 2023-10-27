@@ -178,7 +178,7 @@
     .codeNomads-text h2 {
         font-size: 8.25rem;
         letter-spacing: -0.3375rem;
-        bottom: -3.3rem;
+        bottom: -3.8rem;
     }
 
     /* Footer section */
@@ -272,7 +272,7 @@
         display: flex;
         align-items: flex-end;
         position: absolute;
-        bottom: -4rem;
+        bottom: -5rem;
         left: 4rem;
     }
 
@@ -280,7 +280,7 @@
         flex-direction: row-reverse;
         transform: rotate(270deg);
         transform-origin: bottom left;
-        width: 600px;
+        width: 630px;
     }
 
     .courses-header {
