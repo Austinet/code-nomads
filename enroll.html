@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enroll</title>
     <link rel="stylesheet" href="css/enroll.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header data-aos="fade-down" data-delay="400">
         <!-- Navigation section with links -->
         <div class="header-container container-width">
             <nav>
@@ -69,7 +70,7 @@
     </main>
 
     <!-- Footer section -->
-    <footer id="footer">
+    <footer id="footer" data-aos="fade-up" data-delay="400">
         <div class="footer-container container-width">
             <div class="footer-intro">
                 <img src="assets/icons/logo.svg" alt="logo">
@@ -140,5 +141,9 @@
         </div>
     </footer>
     <script src="js/menu.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>

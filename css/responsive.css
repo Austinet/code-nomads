@@ -6,8 +6,32 @@
     .hero-section-container {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        gap: 2rem;
+        /* gap: 2rem; */
+    }
+
+    .hero-section-header h1>span:first-child {
+        font-size: 4.5rem;
+        line-height: 1.23;
+    }
+
+    .hero-section-header h1>span:nth-child(2) {
+        font-size: 12.5rem;
+        line-height: 10.625rem;
+        letter-spacing: -0.25rem;
+    }
+
+    .enroll-container h2 {
+        width: 12.625rem;
+    }
+
+    /* Courses and sub content section */
+    .course-outline,
+    .course-tabs {
+        display: block;
+    }
+
+    .course-outline-mobile  {
+        display: none;
     }
 
     /* How it works section */
@@ -56,6 +80,10 @@
         justify-content: space-between;
     }
 
+    nav .nav-links a {
+        margin-bottom: 0rem;
+    }
+
     nav .nav-links {
         width: 80%;
     }
@@ -69,20 +97,19 @@
     }
 
     /* Hero section */
+    .hero-section-right {
+        display: flex;
+        gap: 2rem;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
     .hero-section-header h1 {
         gap: 1.5rem;
     }
 
     .hero-section-header h1>span:first-child {
-        font-size: 4.5rem;
         line-height: 5rem;
-        letter-spacing: -0.09rem;
-    }
-
-    .hero-section-header h1>span:nth-child(2) {
-        font-size: 12.5rem;
-        line-height: 10.625rem;
-        letter-spacing: -0.25rem;
     }
 
     .hero-section-header h1>span:nth-child(3) {
@@ -90,9 +117,17 @@
         margin-bottom: 0;
     }
 
-    .enroll-container h2 {
-        width: 12.625rem;
-        font-size: 2.5rem;
+    .hero-image {
+        width: 24rem;
+        height: 27rem;
+    }
+
+    .enroll-container .socials {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 4.31rem;
+        text-align: right;
     }
 
     .phone-number {
@@ -168,6 +203,10 @@
         gap: 2rem;
     }
 
+    .apply-details {
+        margin-bottom: 13rem;
+    }
+
     .apply-container .dot-net h2 {
         font-size: 6.25rem;
         line-height: 7.5rem;
@@ -186,11 +225,21 @@
         max-width: 23.8125rem;
     }
 
+    .codeNomads-text {
+        bottom: -10rem;
+    }
+
     .codeNomads-text h2 {
         font-size: 8.25rem;
         letter-spacing: -0.3375rem;
         bottom: -3.8rem;
         margin-top: 0;
+    }
+
+    .codeNomads-text h3 {
+        font-size: 8rem;
+        bottom: 7.2rem;
+        letter-spacing: 0.03rem;
     }
 
     /* Footer section */
@@ -238,29 +287,18 @@
         padding: 4.25rem 1.5rem 3.9rem;
     }
 
-    .hero-section-right {
-        display: flex;
-        gap: 5rem;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
-
     .hero-image {
-        width: 31.178rem;
+        width: 27rem;
         height: 32.3125rem;
-        margin: 0 auto;
+        margin-left: 0;
     }
 
     .hero-image .gradient {
         height: 15.77088rem;
     }
 
-    .enroll-container .socials {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-        margin-bottom: 5.31rem;
-        text-align: right;
+    .enroll-container h2 {
+        font-size: 2.5rem;
     }
 
     .scroll-down {
@@ -284,7 +322,7 @@
         display: flex;
         align-items: flex-end;
         position: absolute;
-        bottom: -5rem;
+        bottom: 1.3rem;
         left: 4rem;
     }
 
@@ -323,7 +361,28 @@
     }
 
     /* Be a .NET Developer section */
+    .codeNomads-text {
+        bottom: -15.3rem;
+    }
+
     .codeNomads-text h2 {
         font-size: 11.25rem;
+    }
+
+    .codeNomads-text h3 {
+        font-size: 11rem;
+        bottom: 11.2rem;
+        letter-spacing: 0.2rem;
+        left: 0.25rem;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .hero-image {
+        width: 31.178rem;
+    }
+
+    .hero-section-right {
+        gap: 5rem;
     }
 }

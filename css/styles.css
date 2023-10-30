@@ -4,11 +4,26 @@
 /* General Style */
 * {
     font-family: "Satoshi-Variable", "Satoshi", sans-serif;
+    /* border: 1px solid #fff; */
 }
 
 body {
     background-color: var(--black);
     font-family: 'Satoshi-Variable';
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.875rem;
+    letter-spacing: 0.015rem;
+    transition: all 0.3s;
+}
+
+a:hover {
+    color: var(--code-nomads-green) !important;
 }
 
 .container-width {
@@ -54,10 +69,8 @@ nav {
 nav .nav-links a {
     font-family: "Inter", sans-serif;
     color: var(--ash-color);
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.875rem;
-    letter-spacing: 0.015rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
 }
 
 nav .login-signup {
@@ -139,7 +152,7 @@ nav .login-signup li:first-child::after {
 }
 
 .hero-image .gradient {
-    width: 125%;
+    width: 120%;
     height: 9.53881rem;
     position: absolute;
     bottom: 0;
@@ -278,12 +291,7 @@ nav .login-signup li:first-child::after {
     border-radius: 0.125rem;
     border: 1px solid var(--ash-color);
     box-shadow: 0px 4px 10px 0px rgba(192, 181, 181, 0.10) inset;
-    color: var(--white);
     text-align: center;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.875rem;
-    letter-spacing: 0.015rem;
 }
 
 .code-anywhere-image {
@@ -470,6 +478,11 @@ nav .login-signup li:first-child::after {
     padding: 2.94rem 1.5rem 2.32rem;
 }
 
+.course-outline,
+.course-tabs  {
+    display: none;
+}
+
 .course-tabs ul {
     display: flex;
     flex-wrap: wrap;
@@ -565,6 +578,25 @@ nav .login-signup li:first-child::after {
     font-weight: 500;
     line-height: 1.875rem;
     letter-spacing: 0.015rem;
+}
+
+/* Course outline mobile */
+.course-outline-mobile h2 { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.course-outline-mobile h2 button{
+    background-color: var(--black); 
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+.rotate {
+    transform: rotate(180deg);
 }
 
 
@@ -671,10 +703,15 @@ nav .login-signup li:first-child::after {
 
 
 /* Be a .NET Developer section */
+#apply {
+    position: relative;
+}
+
 .apply-container {
     display: flex;
     flex-direction: column;
     padding: 3.88rem 1.5rem 0;
+    position: relative;
 }
 
 .apply-container .dot-net h2 {
@@ -684,6 +721,10 @@ nav .login-signup li:first-child::after {
     font-weight: 300;
     line-height: 100%;
     letter-spacing: -0.1rem;
+}
+
+.apply-details {
+    margin-bottom: 5.19rem;
 }
 
 .apply-details h3 {
@@ -713,7 +754,6 @@ nav .login-signup li:first-child::after {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
-    /* margin-bottom: 5.19rem; */
 }
 
 .contact li {
@@ -745,9 +785,15 @@ nav .login-signup li:first-child::after {
     letter-spacing: 0.015rem;
 }
 
+.codeNomads-text {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: -4.5rem;
+}
+
 .codeNomads-text h2 {
-    color: var(--shade-black);
-    text-shadow: var(--text-shadow), var(--text-shadow);
+    color: var(--code-nomads-green);
     /* background-image: linear-gradient(#ff1919, #36ff32); */
     font-size: 3.375rem;
     font-weight: 700;
@@ -756,7 +802,20 @@ nav .login-signup li:first-child::after {
     text-align: center;
     position: relative;
     bottom: -1.3rem;
-    margin-top: 5.19rem;
+}
+
+.codeNomads-text h3 {
+    color: var(--shade-black);
+    text-shadow: 0px 4px 7px #050502, 0px 0px 4px #ff1919;
+    font-size: 3.375rem;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    bottom: 3.2rem;
+    position: relative;
+    font-size: 3.3rem;
+    letter-spacing: 0.03rem;
+    left: 0.1rem;
 }
 
 
@@ -811,14 +870,6 @@ footer {
     gap: 2rem;
 }
 
-.quicklink-nav a {
-    color: var(--white);
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.875rem;
-    letter-spacing: 0.015rem;
-}
-
 .scroll-up {
     flex-direction: column;
     gap: 0.62rem;
@@ -862,14 +913,6 @@ footer {
     left: 0;
     width: 100%;
     bottom: 1.44rem;
-}
-
-.quicklink-signup a {
-    color: var(--white);
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.875rem;
-    letter-spacing: 0.015rem;
 }
 
 .copyright p {

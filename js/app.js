@@ -1,5 +1,6 @@
 const courseTabs = document.querySelector(".course-tabs ul");
 const courseOutline = document.querySelector(".course-outline");
+const courseOutlineMobile = document.querySelector(".course-outline-mobile");
 
 // Courses database
 const courses = [
@@ -116,7 +117,7 @@ const courses = [
         name: "C#",
         number_of_lectures: 2,
         duration: "30:10 Mins",
-      }
+      },
     ],
   },
   {
@@ -159,11 +160,10 @@ const renderTab = (courses) => {
   courseTabs.innerHTML = tabs;
 };
 
-// Renders the course outline dynamically according to the selected course
+// Renders the course outline dynamically according to the selected course on large screens
 const renderCourseOutline = (courses) => {
   const outlineChange = courses.find((course) => course.active === true);
-  const { description, days, number_of_lectures, duration, sub_contents } =
-    outlineChange;
+  const { description, days, number_of_lectures, duration, sub_contents } = outlineChange;
 
   courseOutline.innerHTML = ` 
   <div class="courses-header">
@@ -215,6 +215,84 @@ const renderCourseOutline = (courses) => {
 `;
 };
 
+// Renders the course outline dynamically according to the selected course on mobile
+const renderCourseOutlineMobile = (courses) => {
+  let outlines = "";
+
+  courses.forEach((course) => {
+    const {
+      id,
+      description,
+      days,
+      number_of_lectures,
+      duration,
+      sub_contents,
+      active
+    } = course;
+    outlines += `
+    <li>
+        <div class="courses-header">
+          <h2 class="">
+              <span>${description}</span>
+              <button class="flex-center-center ${
+                active ? "rotate" : ""
+              }" onclick="viewCourse(${id})">
+                <img src="assets/icons/drop-down.svg" alt="drop down">
+              </button>
+          </h2>
+      </div>
+      <div class="${active ? "" : "close"}">
+      <div class="courses-header">
+          <ul>
+              <li>
+                  <img src="assets/icons/calendar-03.svg" alt="calendar">
+                  <p>${days}</p>
+              </li>
+              <li>
+                  <img src="assets/icons/video-02.svg" alt="video">
+                  <p>${number_of_lectures}</p>
+              </li>
+              <li>
+                  <img src="assets/icons/clock-03.svg" alt="clock">
+                  <p>${duration} Duration</p>
+              </li>
+          </ul>
+      </div>
+        <div class="sub-content">
+            <ul>
+                ${sub_contents
+                  .map(
+                    (sub_content) =>
+                      `<li class="course-content">
+                    <div class="course-title-container">
+                        <img src="assets/icons/drop-down.svg" alt="drop down">
+                        <p>${sub_content.name}</p>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                <img src="assets/icons/video-02.svg" alt="video">
+                                <p>${sub_content.number_of_lectures} Lectures</p>
+                            </li>
+                            <li>
+                                <img src="assets/icons/clock-03.svg" alt="clock">
+                                <p>${sub_content.duration}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li> `
+                  )
+                  .join("")}
+            </ul>
+        </div>
+      </div>
+    </li>
+    `;
+  });
+
+  courseOutlineMobile.innerHTML = outlines;
+};
+
 //Switch courses and tabs
 const viewCourse = (id) => {
   const courseChange = courses.map((course) => {
@@ -226,8 +304,10 @@ const viewCourse = (id) => {
   });
   renderTab(courseChange);
   renderCourseOutline(courseChange);
+  renderCourseOutlineMobile(courseChange);
 };
 
 //Render on load by default
 renderTab(courses);
 renderCourseOutline(courses);
+renderCourseOutlineMobile(courses);
